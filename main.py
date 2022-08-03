@@ -28,8 +28,8 @@ async def start_handler(_, event: Message):
 
     await event.reply_text(Config.START_MSG.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/FilmyFather_BotList"),
-             InlineKeyboardButton("Our Group", url="https://t.me/RequestingHuB")],
+            [InlineKeyboardButton("Our Channel", url="https://t.me/mtpmasala"),
+             InlineKeyboardButton("Our Group", url="https://t.me/mdisklinksbotchat")],
             [InlineKeyboardButton("Help", callback_data="Help_msg"),
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
@@ -40,8 +40,8 @@ async def help_handler(_, event: Message):
 
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/FilmyFather_BotList"),
-             InlineKeyboardButton("Our Group", url="https://t.me/RequestingHuB"), 
+            [InlineKeyboardButton("Our Channel", url="https://t.me/mtpmasala"),
+             InlineKeyboardButton("Our Group", url="https://t.me/mdisklinksbotchat"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
@@ -50,7 +50,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
-    answers = f'**📂 Results For ➠ {event.text} \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Please Type Correct Spelling.✍️\n➠ Add Year For Better Result.🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
+    answers = f'**📂 Results For ➠ {event.text} \n\n ➠ join us now @mtpmasala \n➠ Please Type Correct Spelling of movie and year for better experience .✍️\n➠ If any movie links not added or expired message here @mdisklinksbotchat.🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -81,11 +81,11 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Our Channel", url="https://t.me/FilmyFather_BotlIst"),
-						InlineKeyboardButton("Our Group", url="https://t.me/RequestingHuB")
+						InlineKeyboardButton("Our Channel", url="https://t.me/mtpmasala"),
+						InlineKeyboardButton("Our Group", url="https://t.me/mdisklinksbotchat")
 					],
 					[
-						InlineKeyboardButton("Developer", url="https://t.me/Yuvi_4502"),
+						InlineKeyboardButton("Developer", url="https://t.me/hari_813"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -100,10 +100,10 @@ async def button(bot, cmd: CallbackQuery):
 				[
 					[
 						InlineKeyboardButton("About", callback_data="About_msg"),
-						InlineKeyboardButton("Our Channel", url="https://t.me/FilmyFather_BotList")
+						InlineKeyboardButton("Our Channel", url="https://t.me/mtpmasala")
 					], 
                                         [
-						InlineKeyboardButton("Owner", url="https://t.me/Yuvi_4502"),
+						InlineKeyboardButton("Owner", url="https://t.me/hari_813"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -121,8 +121,8 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("About", callback_data="About_msg")
 					],
 					[
-						InlineKeyboardButton("Support", url="https://t.me/Yuvi_4502"),
-						InlineKeyboardButton("Channel", url="https://t.me/RequestingHuB")
+						InlineKeyboardButton("Support", url="https://t.me/mdisklinksbotchat"),
+						InlineKeyboardButton("Channel", url="https://t.me/mtpmasala")
 					]
 				]
 			),
