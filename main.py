@@ -28,8 +28,8 @@ async def start_handler(_, event: Message):
 
     await event.reply_text(Config.START_MSG.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/movies_hd_360"),
-             InlineKeyboardButton("Our Group", url="https://t.me/Mdisk_movie_search_bot_telugu1")],
+            [InlineKeyboardButton("Our Channel", url="https://t.me/Star_maa_Waiting"),
+             InlineKeyboardButton("Our Group", url="https://t.me/Movies_Request_Group13")],
             [InlineKeyboardButton("Help", callback_data="Help_msg"),
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
@@ -40,8 +40,8 @@ async def help_handler(_, event: Message):
 
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/movies_hd_360"),
-             InlineKeyboardButton("Our Group", url="https://t.me/Mdisk_movie_search_bot_telugu1"), 
+            [InlineKeyboardButton("Our Channel", url="https://t.me/Star_maa_Waiting"),
+             InlineKeyboardButton("Our Group", url="https://t.me/Movies_Request_Group13"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
@@ -50,7 +50,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
-    answers = f'**📂 Results For ➠ {event.text} \n\n ➠ join us now @movies_hd_360 \n➠ Please Type Correct Spelling of movie and year for better experience .✍️\n➠ If any movie links not added or expired message here @Mdisk_movie_search_bot_telugu1.🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
+    answers = f'**📂 Results For ➠ {event.text} \n\n ➠ join us now @Star_maa_Waiting \n➠ Please Type Correct Spelling of movie and year for better experience .✍️\n➠ If any movie links not added or expired message here @Mdisk_movie_search_bot_telugu1.🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -81,8 +81,8 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Our Channel", url="https://t.me/movies_hd_360"),
-						InlineKeyboardButton("Our Group", url="https://t.me/Mdisk_movie_search_bot_telugu1")
+						InlineKeyboardButton("Our Channel", url="https://t.me/Star_maa_Waiting"),
+						InlineKeyboardButton("Our Group", url="https://t.me/Movies_Request_Group13")
 					],
 					[
 						InlineKeyboardButton("Developer", url="https://t.me/hari_813"),
@@ -100,10 +100,10 @@ async def button(bot, cmd: CallbackQuery):
 				[
 					[
 						InlineKeyboardButton("About", callback_data="About_msg"),
-						InlineKeyboardButton("Our Channel", url="https://t.me/movies_hd_360")
+						InlineKeyboardButton("Our Channel", url="https://t.me/Star_maa_Waiting")
 					], 
                                         [
-						InlineKeyboardButton("Owner", url="https://t.me/movies_hd_360"),
+						InlineKeyboardButton("Owner", url="https://t.me/Star_maa_Waiting"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -121,8 +121,8 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("About", callback_data="About_msg")
 					],
 					[
-						InlineKeyboardButton("Support", url="https://t.me/Mdisk_movie_search_bot_telugu1"),
-						InlineKeyboardButton("Channel", url="https://t.me/movies_hd_360")
+						InlineKeyboardButton("Support", url="https://t.me/Movies_Request_Group13"),
+						InlineKeyboardButton("Channel", url="https://t.me/Star_maa_Waiting")
 					]
 				]
 			),
